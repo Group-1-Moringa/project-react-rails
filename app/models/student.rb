@@ -12,3 +12,6 @@ class Student < ApplicationRecord
 
   attribute :admin, :boolean, default: false
 end
+
+
+
