@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   resources :enrollments, only: [:index, :show, :destroy, :create, :update]
 
   resources :password_resets, only: [:new, :create, :edit, :update]
-
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
   #get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
