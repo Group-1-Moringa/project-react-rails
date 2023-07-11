@@ -1,76 +1,33 @@
-## Project Title: Phone store Management System
-
-## License Free.
-## copyright Free Software .
-
-## Author Mathew Kipkoech
-
-## Project Descrition
-The app is designed for phone stores in Nairobi to help them manage their inventory. It has buying and selling prices for phones. There's a manual order form where salespeople can add items to the inventory when they make a sale, and it automatically subtracts from the inventory. The dashboard displays the total profits, sales, and orders. It also allows for daily statistics and easy accounting calculations.
-
-
-# setup instruction
-        bundle install -on ruby folder
-        bundle exec rake db:migrate db:seed
-        bundle exec rake server
-
-
-        npm install -on react folder
-        npm start -on react folder
-
-##  Summary
-    implemented one-to-many relationship and many-to-many relationship
-   
-    4 tables created allitems, 
-    customers, orders, orders,phones,
-   
-    all models and relations created
-   
-    all API routes in Sinatra  GET, POST, PATCH, DELETE working
-   
-    React-frontend created
-   
-    all tables data queries to from react through ruby apis
-
-
-
-##### domain model
-
-            https://drive.google.com/file/d/1JFddWSryJ9D-O5Mn7CDheaXhNVWqtcxt/view?usp=sharing
-
-####   schema
-
-        create_table "allitems", force: :cascade do |t|
-            t.string "name"
-            t.string "brand"
-            t.string "type"
-            t.string "itemtype"
-        end
-
-        create_table "customers", force: :cascade do |t|
-            t.string "name"
-            t.string "email"
-            t.integer "phone"
-            t.datetime "created_at", null: false
-            t.datetime "updated_at", null: false
-        end
-
-        create_table "orders", force: :cascade do |t|
-            t.integer "phone_id"
-            t.integer "quantity"
-            t.integer "buying_price"
-            t.integer "selling_price"
-            t.datetime "created_at", null: false
-            t.datetime "updated_at", null: false
-            t.integer "customer_id"
-        end
-
-        create_table "phones", force: :cascade do |t|
-            t.integer "quantity"
-            t.integer "buying_price"
-            t.integer "selling_price"
-            t.datetime "created_at", null: false
-            t.datetime "updated_at", null: false
-            t.integer "allitem_id"
-        end
-
+Student Portal
+1. display the course
+2. display grades
+3. have timetable
+4. technical mentor details - eg gmail and name
+5. school information
+6. have learning resources
+1. have a student dashboard
+Technical Mentor
+1. check the progress
+2. accept or decline a student
+3. to grade student's work
+Administrator Portal
+1. managing user accounts
+2. managing passwords
+1. Have login credentials
+Enroll For A Course Portal
+1. Have Login credentials
+2. Enroll for a course ----> will have two courses. Computer Engineering and CyberSecurity
+3. Prompts to choose their Technical Mentor
+when a student enrolls for a course a message is sent to the instructor where they can accept or decline
+Technical Mentors
+1. Solomon
+2. Edwina
+3. Anita
+Administrator
+1. Raphael Katana
+Models
+1. Admin
+2. Instructor
+3. Students
+4. course
+We will have the login of students and instructor
